@@ -1,2 +1,2 @@
 # Portfolio
-Showcase of my skills on one single website
+Showcase of my skills and projects learned and made this far.
