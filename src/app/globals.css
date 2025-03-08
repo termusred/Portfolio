@@ -24,3 +24,34 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.item {
+  width: 18rem;
+  height: 25rem;
+}
+
+.list , .item {
+  transition: .5s;
+  filter: brightness(0);
+}
+.list:hover {
+  filter: brightness(1);
+}
+
+.item:hover{
+  filter: brightness(1);
+  transform: translateY(-50px)
+}
+
+.list , .item:hover + * {
+  filter: brightness(0.2);
+}
+.list , .item:hover + * + * {
+  filter: brightness(0.01);
+}
+.list , .item:has(+ *:hover) {
+  filter: brightness(0.2);
+}
+.list , .item:has(+ * + *:hover) {
+  filter: brightness(0.09);
+}
